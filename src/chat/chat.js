@@ -96,7 +96,8 @@ export default class Chat {
                 return;
             
             case 'delUser':
-                Chat.#users.querySelector('.chat-' + message.delUser).remove();
+                //Chat.#users.querySelector('.chat-' + message.delUser).remove();
+                Chat.#users.getElementsByClassName('chat-' + message.delUser)[0].remove();
                 Chat.#messages.insertAdjacentHTML('beforeEnd',
                             `<li class="message"><div  class="nickname">${message.user}: (${message.timestamp})</div>${message.message}</li>`);
                 Chat.#messages.scrollTop = Chat.#messages.scrollHeight;
