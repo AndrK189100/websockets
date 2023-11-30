@@ -78,7 +78,7 @@ export default class Chat {
                 message.fullChat.forEach(message => {
                     if(message.user === Chat.#nickname) {
                         Chat.#messages.insertAdjacentHTML('beforeEnd', 
-                            `<li class="message my-message"><div  class="nickname">${message.user}: (${message.timestamp})</div>${message.message}</li>`);
+                            `<li class="message my-message"><div  class="nickname">Вы: (${message.timestamp})</div>${message.message}</li>`);
                     }
                     else {
                         Chat.#messages.insertAdjacentHTML('beforeEnd',
